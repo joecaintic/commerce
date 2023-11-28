@@ -9,11 +9,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "analyze": "BUNDLE_ANALYZE=both next build",
     "lint": "next lint",
-    "lint-staged": "lint-staged",
-    "prettier": "prettier --write --ignore-unknown .",
-    "prettier:check": "prettier --check --ignore-unknown .",
-    "test": "pnpm lint && pnpm prettier:check"
+    "prettier-fix": "prettier --write .",
+    "find:unused": "npx next-unused",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "git": {
     "pre-commit": "lint-staged"
@@ -26,7 +27,9 @@
     "@heroicons/react": "^2.0.18",
     "clsx": "^2.0.0",
     "geist": "^1.0.0",
+    "global": "^4.4.0",
     "next": "14.0.0",
+    "pnpm": "^8.11.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -38,6 +41,7 @@
     "@types/react-dom": "18.2.14",
     "@vercel/git-hooks": "^1.0.0",
     "autoprefixer": "^10.4.16",
+    "cypress": "^13.6.0",
     "eslint": "^8.52.0",
     "eslint-config-next": "^14.0.0",
     "eslint-config-prettier": "^9.0.0",
