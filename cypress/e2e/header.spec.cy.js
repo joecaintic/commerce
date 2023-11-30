@@ -9,13 +9,13 @@ describe('Header', () => {
   });
 
   it('the search bar returns the correct search results', () => {
-    cy.getBySel('search-input').eq(0).type('star{enter}');
+    cy.getBySel('search-input').eq(0).type('grinch{enter}');
 
     cy.get('[data-test="product-tag"]')
       .first()
       .within(() => {
-        cy.get('[data-test="product-name"]').should('contain', 'Star Wars');
-        cy.get('[data-test="product-price"]').should('contain', '$25.00USD');
+        cy.get('[data-test="product-name"]').should('contain', 'Grinch');
+        cy.get('[data-test="product-price"]').should('contain', '$35.00USD');
       });
   });
 });
