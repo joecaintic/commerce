@@ -9,7 +9,8 @@ describe('Header', () => {
   });
 
   it.only('the search bar returns the correct search results', () => {
-    cy.getBySel('search-input').eq(0).type('star{enter}');
+    cy.getBySel('search-input').eq(0).type('star');
+    cy.getBySel('search-input').eq(0).type('{enter}');
 
     cy.get('[data-test="product-tag"]').within(() => {
       cy.get('[data-test="product-name"]').should('contain', 'Star Wars');
