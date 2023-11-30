@@ -8,9 +8,8 @@ describe('Header', () => {
     cy.location('pathname').should('eq', '/');
   });
 
-  it.only('the search bar returns the correct search results', () => {
-    cy.getBySel('search-input').eq(0).type('star');
-    cy.getBySel('search-input').eq(0).type('{enter}');
+  it('the search bar returns the correct search results', () => {
+    cy.getBySel('search-input').eq(0).type('star{enter}');
 
     cy.get('[data-test="product-tag"]')
       .first()
