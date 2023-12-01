@@ -9,7 +9,8 @@ describe('Header', () => {
   });
 
   it('the search bar returns the correct search results', () => {
-    cy.getBySel('search-input').eq(0).type('grinch{enter}');
+    cy.getBySel('search-input').eq(0).type('grinch');
+    cy.getBySel('search-input').eq(0).type('{enter}', { force: true });
 
     cy.get('[data-test="product-tag"]')
       .first()
