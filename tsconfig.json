@@ -16,6 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "noUncheckedIndexedAccess": true,
+    "types": ["cypress", "node", "cypress-real-events"],
     "plugins": [
       {
         "name": "next"
